@@ -69,7 +69,7 @@ struct MovieWatchingActivity: GroupActivity {
         var meta = GroupActivityMetadata()
         meta.title = "Sample"
         meta.subtitle = "WWDC19 Session Video"
-        meta.previewImage = UIImage(named: "wwdc19")?.cgImage
+//        meta.previewImage = UIImage(named: "wwdc19")?.cgImage
         meta.fallbackURL = URL(string: "https://spinners.work/")
 //        meta.type = .watchTogether
         return meta
