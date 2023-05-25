@@ -20,11 +20,11 @@
 /* Begin PBXFileReference section */
 		7EC4974F2751030D00F779F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC4975C2751030D00F779F4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		F7935CE82A1E7AB40009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SharePlayVideoPlayer.app; path = "/Users/tristanthomson/nonHudlRepos/SharePlayVideoPlayer/build/Debug-iphoneos/SharePlayVideoPlayer.app"; sourceTree = "<absolute>"; };
-		F7935CEA2A1E7AB40009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SharePlayVideoPlayer.app; path = /Users/tristanthomson/nonHudlRepos/SharePlayVideoPlayer/build/Debug/SharePlayVideoPlayer.app; sourceTree = "<absolute>"; };
 		F7935CEE2A1E7B660009B9BD /* SharePlayVideoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlayVideoApp.swift; sourceTree = "<group>"; };
 		F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		F7935CF42A1E7BC40009B9BD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		F7935CFE2A1E7BF60009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SharePlayVideoPlayer.app; path = /Users/tristanthomson/nonHudlRepos/SharePlayVideoPlayer/build/Debug/SharePlayVideoPlayer.app; sourceTree = "<absolute>"; };
+		F7935CFF2A1E832D0009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharePlayVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +51,7 @@
 				7EC4974C2751030B00F779F4 /* Shared */,
 				7EC4975B2751030D00F779F4 /* macOS */,
 				7EC4976D2751725B00F779F4 /* Frameworks */,
+				F7935CFF2A1E832D0009B9BD /* SharePlayVideoPlayer.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +100,7 @@
 			packageProductDependencies = (
 			);
 			productName = "SharePlayTutorial (iOS)";
-			productReference = F7935CE82A1E7AB40009B9BD /* SharePlayVideoPlayer.app */;
+			productReference = F7935CFF2A1E832D0009B9BD /* SharePlayVideoPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7EC497592751030D00F779F4 /* SharePlayVideoPlayer (macOS) */ = {
@@ -118,7 +119,7 @@
 			packageProductDependencies = (
 			);
 			productName = "SharePlayTutorial (macOS)";
-			productReference = F7935CEA2A1E7AB40009B9BD /* SharePlayVideoPlayer.app */;
+			productReference = F7935CFE2A1E7BF60009B9BD /* SharePlayVideoPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -319,7 +320,6 @@
 		7EC497662751030D00F779F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SharePlayVideoPlayer (iOS).entitlements";
@@ -332,8 +332,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,7 +353,6 @@
 		7EC497672751030D00F779F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SharePlayVideoPlayer (iOS).entitlements";
@@ -366,8 +365,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -23,8 +23,8 @@ class VideoPlayerViewModel: ObservableObject {
         self.videoPlayer = AVPlayer(url: movieToWatch.url)
     }
 
-    private func prepareSharePlay() {
-        let activity = MovieWatchingActivity(movie: movieToWatch)
+    func prepareSharePlay() {
+        let activity = MovieWatchingActivity()
 
         Task {
             switch await activity.prepareForActivation() {
@@ -39,7 +39,7 @@ class VideoPlayerViewModel: ObservableObject {
         }
     }
 
-    private func listenForGroupSession() {
+    func listenForGroupSession() {
         Task {
             for await session in MovieWatchingActivity.sessions() {
                 handleGroupSession(session)
@@ -49,7 +49,7 @@ class VideoPlayerViewModel: ObservableObject {
 
     private func handleGroupSession(_ session: GroupSession<MovieWatchingActivity>) {
         groupSession = session
-        videoPlayer.playbackCoordinator.coordinateWithSession(session)
+        videoPlayer.playbackCoordinator.coordinateWithSession(session) //I think this is where it breaks
 
         session.join()
     }
@@ -62,15 +62,16 @@ struct Movie: Hashable, Codable {
 }
 
 struct MovieWatchingActivity: GroupActivity {
-    let movie: Movie
 
     static let activityIdentifier = "com.tristanthomson.SharePlayVideoPlayer"
 
     var metadata: GroupActivityMetadata {
         var meta = GroupActivityMetadata()
-        meta.title = movie.title
-        meta.fallbackURL = movie.url
-        meta.type = .watchTogether
+        meta.title = "Sample"
+        meta.subtitle = "WWDC19 Session Video"
+        meta.previewImage = UIImage(named: "wwdc19")?.cgImage
+        meta.fallbackURL = URL(string: "https://spinners.work/")
+//        meta.type = .watchTogether
         return meta
     }
 }

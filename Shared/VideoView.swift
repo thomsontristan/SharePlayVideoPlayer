@@ -12,6 +12,11 @@ struct VideoView: View {
     @ObservedObject var viewModel: VideoPlayerViewModel
 
     var body: some View {
-        VideoPlayer(player: viewModel.videoPlayer)
+        VStack {
+            VideoPlayer(player: viewModel.videoPlayer)
+        }.task {
+            viewModel.prepareSharePlay()
+            viewModel.listenForGroupSession()
+        }
     }
 }
