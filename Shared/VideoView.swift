@@ -9,14 +9,14 @@ import AVKit
 import SwiftUI
 
 struct VideoView: View {
-    @ObservedObject var viewModel: VideoPlayerViewModel
+    @ObservedObject var viewController: VideoPlayerViewController
 
     var body: some View {
         VStack {
-            VideoPlayer(player: viewModel.videoPlayer)
+            VideoPlayer(player: viewController.videoPlayer)
         }.task {
-            viewModel.prepareSharePlay()
-            viewModel.listenForGroupSession()
+            viewController.prepareSharePlay()
+            viewController.listenForGroupSession()
         }
     }
 }

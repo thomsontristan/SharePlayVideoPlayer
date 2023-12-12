@@ -10,7 +10,7 @@ import SwiftUI
 import AVKit
 
 @MainActor
-class VideoPlayerViewModel: ObservableObject {
+class VideoPlayerViewController: ObservableObject {
 
     private var groupSession: GroupSession<MovieWatchingActivity>?
 
@@ -69,8 +69,7 @@ struct MovieWatchingActivity: GroupActivity {
         var meta = GroupActivityMetadata()
         meta.title = "Sample"
         meta.subtitle = "WWDC19 Session Video"
-//        meta.previewImage = UIImage(named: "wwdc19")?.cgImage
-        meta.fallbackURL = URL(string: "https://spinners.work/")
+        meta.fallbackURL = URL(string: "https://www.hudl.com")
 //        meta.type = .watchTogether
         return meta
     }

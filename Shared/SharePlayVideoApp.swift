@@ -7,13 +7,14 @@
 
 import AVKit
 import SwiftUI
+import GroupActivities
 
 @main
 struct SharePlayVideoApp: App {
     var body: some Scene {
         WindowGroup {
-            let viewModel = VideoPlayerViewModel()
-            VideoView(viewModel: viewModel)
+            let viewController = VideoPlayerViewController()
+            VideoView(viewController: viewController)
         }
     }
 }
