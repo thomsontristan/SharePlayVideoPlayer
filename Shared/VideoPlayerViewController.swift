@@ -1,6 +1,6 @@
 //
-//  VideoPlayerViewModel.swift
-//  SharePlayTutorial (iOS)
+//  VideoPlayerViewController.swift
+//  SharePlayVideoPlayer
 //
 //  Created by Tristan Thomson
 //
@@ -24,7 +24,7 @@ class VideoPlayerViewController: ObservableObject {
     }
 
     func prepareSharePlay() {
-        let activity = MovieWatchingActivity()
+        let activity = MovieWatchingActivity(movie: movieToWatch)
 
         Task {
             switch await activity.prepareForActivation() {
@@ -50,7 +50,6 @@ class VideoPlayerViewController: ObservableObject {
     private func handleGroupSession(_ session: GroupSession<MovieWatchingActivity>) {
         groupSession = session
         videoPlayer.playbackCoordinator.coordinateWithSession(session) //I think this is where it breaks
-
         session.join()
     }
 }
@@ -64,13 +63,14 @@ struct Movie: Hashable, Codable {
 struct MovieWatchingActivity: GroupActivity {
 
     static let activityIdentifier = "com.tristanthomson.SharePlayVideoPlayer"
+    var movie: Movie
 
     var metadata: GroupActivityMetadata {
         var meta = GroupActivityMetadata()
-        meta.title = "Sample"
-        meta.subtitle = "WWDC19 Session Video"
+        meta.title = movie.title
+        meta.subtitle = movie.description
         meta.fallbackURL = URL(string: "https://www.hudl.com")
-//        meta.type = .watchTogether
+        meta.type = .watchTogether
         return meta
     }
 }

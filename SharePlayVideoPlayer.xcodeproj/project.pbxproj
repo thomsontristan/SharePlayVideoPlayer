@@ -11,19 +11,16 @@
 		7EC497622751030D00F779F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC4974F2751030D00F779F4 /* Assets.xcassets */; };
 		F7935CEF2A1E7B660009B9BD /* SharePlayVideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CEE2A1E7B660009B9BD /* SharePlayVideoApp.swift */; };
 		F7935CF02A1E7B660009B9BD /* SharePlayVideoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CEE2A1E7B660009B9BD /* SharePlayVideoApp.swift */; };
-		F7935CF22A1E7BAC0009B9BD /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewModel.swift */; };
-		F7935CF32A1E7BAC0009B9BD /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewModel.swift */; };
-		F7935CF52A1E7BC40009B9BD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF42A1E7BC40009B9BD /* VideoView.swift */; };
-		F7935CF62A1E7BC40009B9BD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF42A1E7BC40009B9BD /* VideoView.swift */; };
+		F7935CF22A1E7BAC0009B9BD /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewController.swift */; };
+		F7935CF32A1E7BAC0009B9BD /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EC4974F2751030D00F779F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC4975C2751030D00F779F4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F7350D342B287A3700404A9E /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharePlayVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7935CEE2A1E7B660009B9BD /* SharePlayVideoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlayVideoApp.swift; sourceTree = "<group>"; };
-		F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
-		F7935CF42A1E7BC40009B9BD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		F7935CFE2A1E7BF60009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SharePlayVideoPlayer.app; path = /Users/tristanthomson/nonHudlRepos/SharePlayVideoPlayer/build/Debug/SharePlayVideoPlayer.app; sourceTree = "<absolute>"; };
+		F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		F7935CFF2A1E832D0009B9BD /* SharePlayVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharePlayVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,6 +49,7 @@
 				7EC4975B2751030D00F779F4 /* macOS */,
 				7EC4976D2751725B00F779F4 /* Frameworks */,
 				F7935CFF2A1E832D0009B9BD /* SharePlayVideoPlayer.app */,
+				F7350D342B287A3700404A9E /* SharePlayVideoPlayer.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +58,7 @@
 			children = (
 				7EC4974F2751030D00F779F4 /* Assets.xcassets */,
 				F7935CEE2A1E7B660009B9BD /* SharePlayVideoApp.swift */,
-				F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewModel.swift */,
-				F7935CF42A1E7BC40009B9BD /* VideoView.swift */,
+				F7935CF12A1E7BAC0009B9BD /* VideoPlayerViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -119,7 +116,7 @@
 			packageProductDependencies = (
 			);
 			productName = "SharePlayTutorial (macOS)";
-			productReference = F7935CFE2A1E7BF60009B9BD /* SharePlayVideoPlayer.app */;
+			productReference = F7350D342B287A3700404A9E /* SharePlayVideoPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,9 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7935CF52A1E7BC40009B9BD /* VideoView.swift in Sources */,
 				F7935CEF2A1E7B660009B9BD /* SharePlayVideoApp.swift in Sources */,
-				F7935CF22A1E7BAC0009B9BD /* VideoPlayerViewModel.swift in Sources */,
+				F7935CF22A1E7BAC0009B9BD /* VideoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,9 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7935CF62A1E7BC40009B9BD /* VideoView.swift in Sources */,
 				F7935CF02A1E7B660009B9BD /* SharePlayVideoApp.swift in Sources */,
-				F7935CF32A1E7BAC0009B9BD /* VideoPlayerViewModel.swift in Sources */,
+				F7935CF32A1E7BAC0009B9BD /* VideoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,12 @@
 //
 //  SharePlayVideoApp.swift
-//  Shared
+//  SharePlayVideoPlayer
 //
 //  Created by Tristan Thomson
 //
 
 import AVKit
 import SwiftUI
-import GroupActivities
 
 @main
 struct SharePlayVideoApp: App {
@@ -15,6 +14,19 @@ struct SharePlayVideoApp: App {
         WindowGroup {
             let viewController = VideoPlayerViewController()
             VideoView(viewController: viewController)
+        }
+    }
+}
+
+struct VideoView: View {
+    @ObservedObject var viewController: VideoPlayerViewController
+
+    var body: some View {
+        VStack {
+            VideoPlayer(player: viewController.videoPlayer)
+        }.task {
+            viewController.prepareSharePlay()
+            viewController.listenForGroupSession()
         }
     }
 }
